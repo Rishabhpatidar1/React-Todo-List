@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body{
+    height: 100%;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main{
+    height: 100vh;
+    width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top{
+    height: 25vh;
+    background-color: rgb(104, 183, 203);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+    border: 1px solid rgb(104, 183, 203);
 }
 
-.App-link {
-  color: #61dafb;
+.task{
+    height: 180px;
+    width: 580px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translate(-50% , 0%);
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.138);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top h2{
+    font-size: 30px;
+    font-family: "gilroy";
+    font-weight: 500;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.task input{
+    font-family: "gilroy";
+    font-weight: 500;
+    font-size: 16px;
+    height: 40px;
+    width: 300px;
+    /* padding: 0px 10px; */
+    background-color: white;
+    /* border-radius: 4px; */
+    /* box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.104); */
+    border: none;
+    /* border-bottom-color: rgb(92, 187, 211); */
+    border-bottom: 2px solid rgb(77, 156, 175);
+    outline: none;
+}
+
+.task button{
+    font-size: 15px;
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #ED6A5A;
+    padding: 7px 50px ;
+    color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 20px 0px #ed6b5a83;
+    border: none;
+    /* border-color: 1px solid #ED6A5A; */
+    cursor: pointer;
+}
+
+.bottom{
+    height: 75vh;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listcontent{
+  height: 260px;
+  /* background-color: red; */
+  /* scrollbar-width: none; */
+  overflow-y: scroll;
+}
+
+.list{
+    height: 50vh;
+    width: 580px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.138);
+}
+
+.list h3{
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    color: black;
+}
+
+.listatt{
+    height: 35px;
+    background-color: rgb(245, 245, 245);
+    padding: 0px 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listatt p{
+    font-size: 14px;
+    font-family: "gilroy";
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #666;
+}
+
+.singlelist{
+    height: 80px;
+    /* background-color: red; */
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #999;
+}
+
+.singlelist h3{
+    font-size: 15px;
+    font-family: "gilroy";
+    font-weight: 500;
+    text-transform: capitalize;
+    color: black;
+}
+
+.name{
+    width: 100px;
+}
+
+.status{
+    font-family: "gilroy";
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: lightblue;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 0px rgba(173, 216, 230, 0.544);
+}
+
+.icons{
+    width: 40px;
+}
+
+.ri-delete-bin-5-fill{
+    color: red;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.ri-check-double-fill{
+    color: green;
+    cursor: pointer;
 }
